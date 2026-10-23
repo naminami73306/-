@@ -375,7 +375,7 @@ Private Function PairList(ByVal srcKey As Range, ByVal dstKey As Range, _
                           ByRef srcCols() As Long, ByRef dstCols() As Long, ByVal n As Long) As String
     Dim i As Long, s As String
     If n = 0 Then Exit Function
-    s = vbCrLf & "（ここまでの指定）" & vbCrLf
+    s = ""
     For i = 1 To n
         s = s & "　 " & ColLabel(srcKey.Worksheet, srcCols(i), srcKey.Row) & _
                 " → " & ColLabel(dstKey.Worksheet, dstCols(i), dstKey.Row) & vbCrLf
